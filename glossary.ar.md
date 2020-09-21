@@ -20,4 +20,7 @@
 
 
 ## <a name="غير-متزامن"></a>غير-متزامن
-The Oxford Dictionary defines asynchronous as _“not existing or occurring at the same time”_. In the context of this manifesto we mean that the processing of a request occurs at an arbitrary point in time, sometime after it has been transmitted from client to service. The client cannot directly observe, or synchronize with, the execution that occurs within the service. This is the antonym of synchronous processing which implies that the client only resumes its own execution once the service has processed the request.
+قاموس اكسوفورد يعرف عدم التزامن علي أنه _“عدم التواجد أو عدم الحدوث فى نفس الوقت”_. في سياق هذا البيان we يعني أن معالج الطلب يحدث فى نقطة زمنية عشوائية، أحيانا بعد أن يتم إرساله من العميل للخدمة. لا يستطيع العميل الملاحظة المباشرة أو ألتزامن مع التنفيذ الحادث من خلال الخدمة. هذا هو النقيض لعملية المزامنة والتي تعني أن العميل يستأنف تنفيذه فقط بمجرد معالجة الخدمة للطلب.
+
+## <a name="الضغط-الخلفي"></a>الضغط-الخلفي
+عندما يواجه [مكون](#مكون) واحد صعوبة فى الاستمرار فى العمل، [النظام](#النظام) ككل يحتاج للاستجابة بطريقة معقولة. من غير المقبول لمكون أن يفشل بطريقة كارثية أو أن يُسقط رسائل بطريقة غير منضبطة. بما أنه لا يمكنه التأقلم ولا يمكنه الفشل، لذا يجب عليه أن ينقل حقيقة أنه تحت ضغط إلى بقية المكونات المسؤولة وبالتالي حثهم علي تقليل الحمل. هذا الضغط الخلفي يعد طريقة استجابة مهمة والتي تسمح للأنظمة الاستجابة بصورة رشيقة بدلا من الانهيار بفعلها. الضغط الخلفي قد يصل بكامل التأثير إلي المستخدم، عند هذه النقطة قد تتدهور الاستجابة، ولكن هذه الطريقة ستؤكد أن النظام مرن تحت الضغط، وسوف يوفر معلومات تسمح للنظام بنفسه أن يضع مصادر آخري  تساعد في توزيع الضغط. انظر [المرونة](#المرونة)
